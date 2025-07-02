@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Brain, Cloud, Shield, BarChart3, Notebook as Robot, Code, Lightbulb, Mail, MessageCircle, Headphones, Heart, CheckCircle, Linkedin, Instagram, ExternalLink } from 'lucide-react';
+import alphakoreImage from './assets/images/alphakore.png';
 import hitarthImage from './assets/images/hitarth.jpg';
 import parthImage from './assets/images/parth.jpg';
 import rajImage from './assets/images/raj.jpg';
@@ -242,17 +243,12 @@ function App() {
                 </div>
               </div>
               <div className="relative">
-                <div className="w-full h-[500px] relative">
-                  <spline-viewer 
-                    url="https://prod.spline.design/Gys5OUTieBbG1QEW/scene.splinecode"
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      border: 'none',
-                      borderRadius: '24px',
-                      overflow: 'hidden'
-                    }}
-                  ></spline-viewer>
+                <div className="w-full h-[500px] relative flex items-center justify-center bg-transparent">
+                  <img 
+                    src={alphakoreImage} 
+                    alt="AlphaKore" 
+                    className="w-full h-full object-contain rounded-3xl filter invert"
+                  />
                 </div>
               </div>
             </div>
