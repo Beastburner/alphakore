@@ -163,13 +163,13 @@ function App() {
       <header className="fixed top-0 left-0 w-full bg-black/80 backdrop-blur-md z-50 border-b border-purple-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="text-2xl font-bold text-white tracking-wider">
-              AlphaKore
+            <div className="text-2xl font-bold text-white tracking-wider flex items-center">
+              <img src={alphakoreImage} alt="AlphaKore" className="h-32 w-auto object-contain filter invert" />
             </div>
             
             {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-8">
-              {['home', 'recent-works', 'community', 'features', 'services', 'docs'].map((section) => (
+              {['home', 'recent-works', 'community', 'features', 'services'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -226,7 +226,7 @@ function App() {
                 <h1 className="text-4xl md:text-6xl font-bold leading-tight">
                   Welcome to{' '}
                   <span className="bg-gradient-to-r from-pink-500 to-cyan-400 bg-clip-text text-transparent">
-                    AUTOMATE
+                    Alpha.Kore
                   </span>
                 </h1>
                 <p className="text-xl text-gray-300 leading-relaxed">
@@ -517,99 +517,6 @@ function App() {
           </div>
         </section>
 
-        {/* Documentation Section */}
-        <section id="docs" className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-4 gap-8">
-              {/* Sidebar */}
-              <div className="lg:col-span-1">
-                <div className="bg-white/5 backdrop-blur-md rounded-2xl p-6 border-2 border-purple-500/30 sticky top-24">
-                  <nav className="space-y-6">
-                    {[
-                      {
-                        title: 'Getting Started',
-                        items: ['Quick Start Guide', 'Installation', 'Basic Usage']
-                      },
-                      {
-                        title: 'Legal Documents',
-                        items: ['Terms of Service', 'Privacy Policy', 'Security Policy', 'Compliance']
-                      },
-                      {
-                        title: 'User Guides',
-                        items: ['Automation Guide', 'AI Features', 'Integration Guide', 'API Documentation']
-                      },
-                      {
-                        title: 'Support',
-                        items: ['FAQ', 'Troubleshooting', 'Contact Support']
-                      }
-                    ].map((section, index) => (
-                      <div key={index}>
-                        <h3 className="text-pink-500 font-semibold mb-3">{section.title}</h3>
-                        <ul className="space-y-2">
-                          {section.items.map((item, itemIndex) => (
-                            <li key={itemIndex}>
-                              <button className="text-white hover:text-pink-500 transition-colors duration-300 text-left">
-                                {item}
-                              </button>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </nav>
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="lg:col-span-3">
-                <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10">
-                  <h2 className="text-3xl font-bold text-pink-500 mb-6">Quick Start Guide</h2>
-                  <p className="text-gray-300 mb-8 leading-relaxed">
-                    Get started with AutoMate in minutes. Follow these simple steps to begin your automation journey.
-                  </p>
-                  
-                  <div className="grid md:grid-cols-3 gap-6">
-                    {[
-                      {
-                        step: '1',
-                        title: 'Create Account',
-                        description: 'Sign up for an AutoMate account using your email or social login.'
-                      },
-                      {
-                        step: '2',
-                        title: 'Configure Workspace',
-                        description: 'Set up your workspace and customize your automation preferences.'
-                      },
-                      {
-                        step: '3',
-                        title: 'Start Automating',
-                        description: 'Create your first automation workflow and watch the magic happen.'
-                      }
-                    ].map((step, index) => (
-                      <div key={index} className="bg-white/5 rounded-xl p-6 relative">
-                        <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-r from-pink-500 to-cyan-400 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                          {step.step}
-                        </div>
-                        <h3 className="text-xl font-bold mb-3">{step.title}</h3>
-                        <p className="text-gray-300 leading-relaxed">{step.description}</p>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="mt-12 bg-white/5 rounded-xl p-6">
-                    <h3 className="text-xl font-bold mb-4">Frequently Asked Questions</h3>
-                    <div className="space-y-4">
-                      <div>
-                        <h4 className="text-cyan-400 font-semibold mb-2">How secure is AutoMate?</h4>
-                        <p className="text-gray-300">We implement industry-standard security measures including end-to-end encryption...</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Contact Section */}
         <section className="py-20">
